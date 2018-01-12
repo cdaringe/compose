@@ -1,0 +1,10 @@
+version: '3'
+
+networks:
+  external:
+  internal:
+    internal: true
+
+services:
+  web-app:
+    image: cdaringe/httpster

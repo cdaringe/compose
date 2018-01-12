@@ -99,7 +99,7 @@ def dispatch():
         TopLevelCommand,
         {'options_first': True, 'version': get_version_info('compose')})
 
-    options, handler, command_options = dispatcher.parse(sys.argv[1:])
+    options, handler, command_options = dispatcher.parse(sys.argv[1:]) # ['up']
     setup_console_handler(console_handler, options.get('--verbose'), options.get('--no-ansi'))
     setup_parallel_logger(options.get('--no-ansi'))
     if options.get('--no-ansi'):
